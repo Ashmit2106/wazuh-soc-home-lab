@@ -1,0 +1,21 @@
+<group name="linux,ssh,authentication_failures,">
+
+    <rule id="100201" level="10" frequency="3" timeframe="60">
+
+        <if_matched_sid>5760</if_matched_sid>
+        <same_srcip />
+
+        <description>Three or more SSH login failures observed from the same source IP within 60 seconds.</description>
+
+        <mitre>
+            <id>T1110</id>
+        </mitre>
+
+        <group>
+            authentication_failures,
+            brute_force,
+            credential_access,
+        </group>
+
+    </rule>
+</group>
